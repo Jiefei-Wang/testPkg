@@ -3,7 +3,7 @@
 
 # testPkg
 
-For reproduce the problem, run code:
+For reproducing the problem, run code:
 
     devtools::load_all()
     
