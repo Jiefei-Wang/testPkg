@@ -4,13 +4,14 @@
 R_altrep_class_t altrep_integer_class;
 R_altrep_class_t altrep_real_class;
 
+//Defined in the end of the file
+SEXP make_altrep(int type, size_t n);
+
 /*
 ==========================================
 ALTREP operations
 ==========================================
 */
-SEXP make_altrep(int type, size_t n);
-
 Rboolean altrep_Inspect(SEXP x, int pre, int deep, int pvec,
                         void (*inspect_subtree)(SEXP, int, int, int))
 {
