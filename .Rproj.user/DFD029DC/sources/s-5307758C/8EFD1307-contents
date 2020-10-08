@@ -1,0 +1,56 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+
+# testPkg
+
+For reproduce the problem, run code:
+```
+devtools::load_all()
+
+## Duplicate and coerce
+x <- make_integer_altrep(10)
+.Internal(inspect(x))
+x1 <- x
+x1[1] <- 1.0 
+.Internal(inspect(x1))
+
+## No duplicate and coerce
+x <- make_integer_altrep(1024)
+.Internal(inspect(x))
+x1 <- x
+x1[1] <- 1.0 
+.Internal(inspect(x1))
+```
+
+
+Results:
+```{r}
+devtools::load_all()
+
+## Duplicate and coerce
+x <- make_integer_altrep(10)
+.Internal(inspect(x))
+x1 <- x
+x1[1] <- 1.0 
+.Internal(inspect(x1))
+
+## No duplicate and coerce
+x <- make_integer_altrep(1024)
+.Internal(inspect(x))
+x1 <- x
+x1[1] <- 1.0 
+.Internal(inspect(x1))
+```
