@@ -54,3 +54,10 @@ x1 <- x
 x1[1] <- 1.0 
 .Internal(inspect(x1))
 ```
+
+
+# Session Info
+```{r}
+sessionInfo()
+```
+

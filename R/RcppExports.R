@@ -9,11 +9,3 @@ make_integer_altrep <- function(n) {
     .Call(`_testPkg_make_integer_altrep`, n)
 }
 
-make_real_altrep <- function(n) {
-    .Call(`_testPkg_make_real_altrep`, n)
-}
-
-make_integer_altrep <- function(n) {
-    .Call(`_testPkg_make_integer_altrep`, n)
-}
-
