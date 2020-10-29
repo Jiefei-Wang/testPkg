@@ -50,3 +50,7 @@ debug_output
 
 inst/test
 inst/doc
+
+src/.vscode
+
+inst

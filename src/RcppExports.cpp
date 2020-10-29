@@ -16,29 +16,15 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-// make_integer_altrep
-SEXP make_integer_altrep(size_t n);
-RcppExport SEXP _testPkg_make_integer_altrep(SEXP nSEXP) {
-BEGIN_RCPP
-    Rcpp::RObject rcpp_result_gen;
-    Rcpp::RNGScope rcpp_rngScope_gen;
-    Rcpp::traits::input_parameter< size_t >::type n(nSEXP);
-    rcpp_result_gen = Rcpp::wrap(make_integer_altrep(n));
-    return rcpp_result_gen;
-END_RCPP
-}
 
 static const R_CallMethodDef CallEntries[] = {
     {"_testPkg_make_real_altrep", (DL_FUNC) &_testPkg_make_real_altrep, 1},
-    {"_testPkg_make_integer_altrep", (DL_FUNC) &_testPkg_make_integer_altrep, 1},
     {NULL, NULL, 0}
 };
 
-void init_altrep_integer_class(DllInfo *dll);
 void ini_altrep_real_class(DllInfo *dll);
 RcppExport void R_init_testPkg(DllInfo *dll) {
     R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
     R_useDynamicSymbols(dll, FALSE);
-    init_altrep_integer_class(dll);
     ini_altrep_real_class(dll);
 }
